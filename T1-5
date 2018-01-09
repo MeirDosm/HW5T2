@@ -1,0 +1,167 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+
+
+int main(int argc, char** argv) {
+	
+	start:
+		cout << "Vvedite nomer zadaniya: ";
+		int n=0;
+		cin >> n;
+		
+		if (n==1)
+		{
+			int a[4];
+	        int b[4];
+	        int i,j;
+	        int S1=0, S2=0;
+	
+	        cout << "Vvedite ocenki 1 uchenika po matematike, fizike, informatike i fizkul'ture': " << endl;
+	
+	        for (i=0;i<=3;i++)
+	        {
+		        cin >> a[i];	
+				S1+=a[i];	
+	        }
+	        cout << "Summa ocenok 1 uchenika po 4 predmetam ravna: " << S1 << endl;
+	
+	        cout << "Vvedite ocenki 2 uchenika po matematike, fizike, informatike i fizkul'ture': " << endl;
+	
+	        for (j=0;j<=3;j++)
+	        {
+		        cin >> b[j];
+		        S2+=b[j];
+	        }
+	        cout << "Summa ocenok 2 uchenika po 4 predmetam ravna: " << S2 << endl;
+	        
+	        goto start;
+		}
+		
+		else if (n==2)
+		{
+			float a[20];
+	        float b[20];
+	        int i, j;
+	        float S1=0, S2=0, A1=0, A2=0;
+	
+	        for (i=0;i<=19;i++)
+	        {
+		        cout << "Vvedite vozrast v vide veshestvennyh chisel vseh 20 uchenikov 1 klassa: " << endl;
+		        cin >> a[i];
+		        S1+=a[i];
+	        }
+	        A1 = S1/20;
+	        cout << "Srednii vozrast uchenikov 1 klassa raven: " << A1 << endl;
+	
+	        for (j=0;j<=19;j++)
+        	{
+	         	cout << "Vvedite vozrast v vide veshestvennyh chisel vseh 20 uchenikov 2 klassa: " << endl;
+		        cin >> b[j];
+		        S2+=b[j];
+	        }
+	        A2 = S2/20;
+	        cout << "Srednii vozrast uchenikov 2 klassa raven: " << A2 << endl;
+	
+	        goto start;
+		}
+		
+		else if (n==3)
+		{
+			float a[31];
+	        float b[31];
+	        int i, j;
+	        float T1=0, T2=0;
+	        float A1=0, A2=0;
+	
+	        for (i=0;i<=30;i++)
+	        {
+		        cout << "Vvedite kolichestvo osadkov v ml v kazhdyi den' yanvarya: " << endl;
+		        cin >> a[i];
+		        T1+=a[i];
+	        }
+	        A1=T1/31;
+	        cout << "Srednee kolichestvo osadkov v yanvare bylo: " << A1 << endl;
+	
+	        for (j=0;j<=30;j++)
+	        {
+		        cout << "Vvedite kolichestvo osadkov v ml v kazhdyi den' marta: " << endl;
+		        cin >> b[j];
+		        T2+=b[j];
+	        }
+	        A2=T2/31;
+	        cout << "Srednee kolichestvo osadkov v marte bylo: " << A2 << endl;
+	        
+	        goto start;
+		}
+		
+		else if (n==4)
+		{
+			int i,j;
+         	float a[15];
+	        float b[15];
+	        float Height1=0, Height2=0;
+        	float A1=0, A2=0;
+	
+	        for (i=0;i<=14;i++)
+	        {
+		        cout << "Vvedite rost 15 uchenikov 1 klassa: " << endl;
+		        cin >> a[i];
+		        Height1+=a[i];
+	        }
+	        A1=Height1/15;
+	        cout << "Srednii rost uchenikov 1 klassa raven: " << A1 << endl;
+	
+	        for (j=0;j<=14;j++)
+	        {
+		        cout << "Vvedite rost 15 uchenikov 2 klassa: " << endl;
+		        cin >> b[j];
+		        Height2+=b[j];
+	        }
+	        A2=Height2/15;
+	        cout << "Srednii rost uchenikov 2 klassa raven: " << A2 << endl;
+	
+	        goto start;
+		}
+		
+		else if (n==5)
+		{
+			int i,j;
+	        float a[10];
+	        float b[10];
+	        float Amount=0;
+          	float TotalAmount=0;
+	        float Productivity=0;
+	        float AvProductivity=0;
+	
+	        for (i=0;i<=9;i++)
+	        {
+		        cout << "Vvedite ploshad', zaseyannaya pshenicej v gektarah v kazhdom iz 10 raionov oblasti: " << endl;
+	        	cin >> a[i];
+	            cout << "Vvedite srednyuyu urozhainost' pshenicy v centnerah s gektara v kazhdom iz 10 raionov oblasti: " << endl;
+                cin >> b[i];
+                Amount = a[i]*b[i];
+                TotalAmount+=Amount;
+                Productivity+=b[i];
+	        }
+	        AvProductivity=Productivity/10;
+	
+	        cout << "Kolichestvo pshenicy, sobrannoe v oblasti ravna: " << TotalAmount << " centnerov." << endl;
+	        cout << "Srednyaya urozhainost' po oblasti ravna: " << AvProductivity << " centnerov s gektara." << endl;
+	        
+	        goto start;	
+		}
+		
+		else 
+		{
+			cout << "Udachi!";
+		}
+		
+	return 0;
+}
